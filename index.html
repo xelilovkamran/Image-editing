@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Changer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-container">
+        <img id="image" alt="" />
+      </div>
+      <div class="form-container">
+        <div class="input-wrapper">
+          <label for="saturation">Saturation</label>
+          <div class="range-output">
+            <input type="range" id="saturation" max="200" min="0" value="100" />
+            <span class="output">100</span>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <label for="blur">Blur</label>
+          <div class="range-output">
+            <input type="range" id="blur" min="0" max="10" value="0" />
+            <span class="output">0</span>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <label for="brightness">Brightness</label>
+          <div class="range-output">
+            <input type="range" id="brightness" min="0" max="200" value="100" />
+            <span class="output">100</span>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <label for="contrast">Contrast</label>
+          <div class="range-output">
+            <input type="range" id="contrast" max="200" min="0" value="100" />
+            <span class="output">100</span>
+          </div>
+        </div>
+      </div>
+      <div class="rotation-buttons">
+        <div class="vertical">
+          <i class="fa-solid fa-arrows-up-down"></i>
+        </div>
+        <div class="horizontal">
+          <i class="fa-solid fa-arrows-left-right"></i>
+        </div>
+        <div class="right"><i class="fa-solid fa-rotate-right"></i></div>
+        <div class="left"><i class="fa-solid fa-rotate-left"></i></div>
+      </div>
+      <div class="buttons">
+        <label class="upload" for="addImage">upload </label>
+        <input type="file" id="addImage" accept=".png,.jpeg,.jpg" />
+        <button class="saveImage">save image</button>
+        <button type="reset" class="reset">Reset</button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
